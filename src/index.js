@@ -1,7 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ListClients from './ListClients';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import allReducers from './reducers';
+import WebPage from './components/WebPage.js';
 
 
-ReactDOM.render(<ListClients />, document.getElementById('root'));
+const store = createStore(allReducers);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <WebPage />
+  </Provider>,
+  document.getElementById('root')
+);

@@ -13,17 +13,19 @@
 .list
   width: 100%
   margin: 0 auto
-.listClients
+.contactsList
   width: 30%
   float: left
-.listClients-list
+.contactsList-list
   padding: 0
+  border: 1px dotted grey
 
 .client
   background-color: rgba(#c2daf0, 0.68)
   display: flex
   align-items: center
   font-family: sans-serif
+  transition: all .6s ease-out
   width: 100%
   padding: 5px
   border:
@@ -32,7 +34,10 @@
     right: 1px dotted grey
   &:last-child
     border-bottom: 1px dotted grey
+  &:hover
+    cursor: pointer
 .client-img
+  height: 50px
   border-radius: 50%
   margin: 10px
   transition: all .6s ease-out
@@ -43,21 +48,35 @@
   font-size: 18px
   font-weight: bold
   margin: 0 auto
+  transition: all .6s ease-out
+  &:hover
+    cursor: pointer
+    transform: scale(1.05)
 .client-job
   font-size: 16px
   color: grey
 
+.clientDetals-start
+  width: 70%
+  float: right
+  margin: 150px auto
+  p
+    font-weight: bold
+    font-size: 50px
 .clientDetals
   width: 70%
   float: right
-  margin: 0 auto
+  margin: 70px auto
   position: relative
+  p
+    font-weight: bold
+    font-size: 32px
 .clientDetals-list
   padding-top: 50px
   width: 100%
 .clientDetals-img
   position: absolute
-  top: 80px
+  top: 10px
   left: 50px
   display: block
   border: 1px dotted grey
@@ -70,8 +89,6 @@
 .clientDetals-job
   font-size: 28px
   color: grey
-
-
 .clientDetals-address,
 .clientDetals-contact
   font-size: 28px
@@ -79,10 +96,9 @@
   span
     font-size: 30px
 
-
 .search-client
-  width: 96.5%
-  margin-right: 10px
+  width: 89.5%
+  margin-left: 40px
   padding: 10px
   margin-top: 20px
   font-size: 16px
